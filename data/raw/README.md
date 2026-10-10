@@ -1,0 +1,1 @@
+Download NASA C-MAPSS from https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data, extract the archive, and place train_FD001.txt, test_FD001.txt, and RUL_FD001.txt here. Raw files are ignored by Git.
