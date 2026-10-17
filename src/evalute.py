@@ -97,6 +97,47 @@ def main():
     print(f"RMSE: {rmse:.3f} cycles")
     print(f"R²:   {r2:.3f}")
 
+    import matplotlib.pyplot as plt
+    # Plot predicted vs. actual RUL
+    # Plot predicted vs. actual RUL
+    import matplotlib.pyplot as plt
+
+    plt.figure(figsize=(8, 6))
+
+    plt.scatter(
+        true_rul,
+        predictions,
+        alpha=0.7,
+        edgecolors="black",
+    )
+
+    # Reference line for perfect predictions
+    min_value = min(true_rul.min(), predictions.min())
+    max_value = max(true_rul.max(), predictions.max())
+
+    plt.plot(
+        [min_value, max_value],
+        [min_value, max_value],
+        linestyle="--",
+        label="Perfect predictions",
+    )
+
+    plt.xlabel("Actual RUL (cycles)")
+    plt.ylabel("Predicted RUL (cycles)")
+    plt.title("Predicta — Predicted vs. Actual RUL")
+    plt.legend()
+    plt.tight_layout()
+
+    # Save the figure in the project's models directory
+    output_path = PROJECT_ROOT / "models" / "predicted_vs_actual_rul.png"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    print(f"\nPlot saved to: {output_path}")
+
+    plt.show()
+    plt.close()
+
 
 if __name__ == "__main__":
     main()
