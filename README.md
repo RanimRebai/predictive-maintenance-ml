@@ -117,6 +117,12 @@ The final test evaluation used all available training engines to train a model, 
 | R² Score | 0.357 |
 | Test engines | 100 |
 
+### 📊 Predicted vs. Actual RUL
+
+The chart below compares the model's predictions with the actual remaining useful life of the 100 test engines. Points closer to the dashed diagonal represent more accurate predictions.
+
+![Predicted vs. Actual RUL](models/predicted_vs_actual_rul.png)
+
 💡 **What do these numbers mean?**
 
 The test MAE of approximately 23.5 cycles means that the model's predictions differed from the true RUL values by an average absolute error of about 23.5 cycles.
