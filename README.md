@@ -136,6 +136,7 @@ Want to explore the project? Here's how to get started. 👇
 ```bash
 git clone https://github.com/RanimRebai/predictive-maintenance-ml.git
 cd predictive-maintenance-ml
+```
 
 ### 🐍 2. Create a virtual environment
 On Windows:
